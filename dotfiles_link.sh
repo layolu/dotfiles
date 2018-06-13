@@ -3,6 +3,9 @@
 ln -sf ~/dotfiles/.abcde.conf ~/.abcde.conf
 ln -sf ~/dotfiles/.bashrc ~/.bashrc
 ln -sf ~/dotfiles/.profile ~/.profile
+if [ ! -d ~/.config/powerline-shell ]; then
+	mkdir -p ~/.config/powerline-shell
+fi
 ln -sf ~/dotfiles/config.json ~/.config/powerline-shell/
 ln -sf ~/dotfiles/.vimrc ~/.vimrc
 if [ ! -d ~/.vim/ftplugin ]; then
