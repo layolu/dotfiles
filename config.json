@@ -1,0 +1,19 @@
+{
+  "segments": [
+    "time",
+    "uptime",
+    "ssh",
+    "username",
+    "hostname",
+    "jobs",
+    "exit_code",
+    "newline",
+    "virtual_env",
+    "read_only",
+    "git",
+    "cwd",
+    "root",
+    "set_term_title"
+  ],
+  "mode": "compatible"
+}
