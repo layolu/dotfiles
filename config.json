@@ -15,5 +15,5 @@
     "root",
     "set_term_title"
   ],
-  "mode": "compatible"
+  "mode": "patched"
 }
