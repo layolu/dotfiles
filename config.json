@@ -18,5 +18,8 @@
   "mode": "patched",
   "hostname": {
 	  "colorize": true
+  },
+  "vcs": {
+	  "show_symbol": true
   }
 }
