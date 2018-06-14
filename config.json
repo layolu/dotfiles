@@ -15,5 +15,8 @@
     "root",
     "set_term_title"
   ],
-  "mode": "patched"
+  "mode": "patched",
+  "hostname": {
+	  "colorize": true
+  }
 }
