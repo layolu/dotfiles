@@ -8,13 +8,13 @@
     "welcome/show-count": 10
   },
   "hterm": {
-    "Inconsolata": {
+    "default": {
       "background-color": "rgba(16, 16, 16, 1)",
       "font-family": "\"Inconsolata\", monospace",
       "font-size": "16",
       "user-css": "https://cdn.rawgit.com/wernight/powerline-web-fonts/e4d967ca4f95d9fa0cf1d51afed2e5a5927d759e/PowerlineFonts.css"
     },
-    "default": {
+    "scpro": {
       "use-default-window-copy": true,
       "font-family": "\"Source Code Pro\", monospace",
       "font-size": "16",

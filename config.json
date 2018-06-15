@@ -16,6 +16,7 @@
     "set_term_title"
   ],
   "mode": "patched",
+  "theme": "default",
   "hostname": {
 	  "colorize": true
   },
