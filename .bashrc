@@ -125,11 +125,14 @@ fi
 
 # cf. https://h2plus.biz/hiromitsu/entry/791 
 # Setup ssh-agent
-if [ -f ~/.ssh-agent ]; then
-	    . ~/.ssh-agent
-fi
-if [ -z "$SSH_AGENT_PID" ] || ! kill -0 $SSH_AGENT_PID; then
-	    ssh-agent > ~/.ssh-agent
-	        . ~/.ssh-agent
+ssh-add -l >& /dev/null
+if [ $? -ne 0 ]; then # not from other server with an agent
+	if [ -f ~/.ssh-agent ]; then
+		    . ~/.ssh-agent
+	fi
+	if [ -z "$SSH_AGENT_PID" ] || ! kill -0 $SSH_AGENT_PID; then
+		    ssh-agent > ~/.ssh-agent
+		        . ~/.ssh-agent
+	fi
 fi
 ssh-add -l >& /dev/null || ssh-add
