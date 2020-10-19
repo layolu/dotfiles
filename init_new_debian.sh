@@ -16,5 +16,5 @@ if [ ! -f /etc/locale.gen.orig ]; then
        	update-locale LANG=ja_JP.UTF-8
 fi
 apt update
-apt install -y vim git dnsutils python3 python3-pip python3-venv
+apt install -y vim-nox git dnsutils python3 python3-pip python3-venv
 pip3 install -r py3_requirements.txt
