@@ -1,8 +1,10 @@
 #!/bin/sh
 # https://qiita.com/okamos/items/7f5461814e8ed8916870
 for f in .abcde.conf .bashrc .gitprofile .profile .vimrc
+do
 	[ -f ~/$f ] && cp -p ~/$f ~/$f.bak.$(date +%s)
 	ln -sf $PWD/$f ~/$f
+done
 
 PS_DIR=~/.config/powerline-shell
 [ ! -d $PS_DIR ] && mkdir -p ~/.config/powerline-shell
