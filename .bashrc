@@ -111,10 +111,14 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+mosh-screen () {
+    mosh "$@" -- screen -dR mosh-session
+}
+
 function _update_ps1() {
     PS1=$(powerline-shell $?)
 }
-
-if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
+if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then 
     PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 fi
