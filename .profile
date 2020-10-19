@@ -22,4 +22,4 @@ if [ -d "$HOME/bin" ] ; then
 fi
 
 export GOPATH="$HOME/.go"
-export PATH=/usr/local/go/bin:$GOPATH/bin:$HOME/.cargo/bin:$PATH
+export PATH=$HOME/.local/bin:/usr/local/go/bin:$GOPATH/bin:$HOME/.cargo/bin:$PATH
