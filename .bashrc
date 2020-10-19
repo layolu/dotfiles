@@ -112,9 +112,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
-mosh-screen () {
-    mosh "$@" -- screen -dR mosh-session
-}
+#mosh-screen () {
+#    /usr/local/bin/mosh "$@" -- screen -dR mosh-session
+#}
 
 function _update_ps1() {
     PS1=$(powerline-shell $?)
@@ -122,3 +122,14 @@ function _update_ps1() {
 if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then 
     PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 fi
+
+# cf. https://h2plus.biz/hiromitsu/entry/791 
+# Setup ssh-agent
+if [ -f ~/.ssh-agent ]; then
+	    . ~/.ssh-agent
+fi
+if [ -z "$SSH_AGENT_PID" ] || ! kill -0 $SSH_AGENT_PID; then
+	    ssh-agent > ~/.ssh-agent
+	        . ~/.ssh-agent
+fi
+ssh-add -l >& /dev/null || ssh-add
